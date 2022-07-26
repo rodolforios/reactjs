@@ -15,3 +15,20 @@ npx create-react-app <nome>
 
 ```
 Podemos iniciar com npm start
+
+## Estrutura Base
+
+* Há algumas pastas e arquivos chave para o sesenvolvimento em React;
+* **node_modules**: Onde as dependências do projeto ficam;
+* **public**: Assets estáticos e HTML de incialização;
+* **src**: Onde vamos programar as nossas apps;
+* **src/index.js**: Arquivo de inicialização do React;
+* **src/App.js:** Componente principal da aplicação;
+
+
+## Emmet
+
+* Emmet é uma extensão nativa do VS Code que ajuda a escrevere HTML mais rápido;
+*Porém ela não vem configurada para o React!
+*Temos que acessar File > Settings > Extensions e procurar por Emmet:
+* Lá vamos incluir a linguagem:javascript-javascriptreact;
