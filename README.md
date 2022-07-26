@@ -100,9 +100,17 @@ export default FirstComponent;
 ```
 const TemplateExpressions = () => {
     const name = "Rodolfo"
+    const data = {
+        age:30,
+        job:"programador",
+    }
     return (
         <div>
             <h1>Olá {name},tudo bem?</h1>
+            <p>Você atua como {data.job}  certo?</p>
+            <p>{4 + 4}</p>
+            <p>{console.log("JSX React")}</p>
+            
         </div>
     )
 }
@@ -110,4 +118,10 @@ const TemplateExpressions = () => {
 export default TemplateExpressions
 
 ```
+
+## Hierarquia de componentes
+
+* Os componentes que criamos **podem ser reutilizados em vários componentes**
+* E ainda componentes **podem formar uma hierarquia, sendo importados uns dentro dos outros, como fizemos em App;
+* Vamos ver na prática estes conceitos!
 
