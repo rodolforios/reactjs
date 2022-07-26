@@ -32,3 +32,82 @@ Podemos iniciar com npm start
 *Porém ela não vem configurada para o React!
 *Temos que acessar File > Settings > Extensions e procurar por Emmet:
 * Lá vamos incluir a linguagem:javascript-javascriptreact;
+
+
+## Criando componentes
+
+* Na maioria dos projetos os componentes ficam em uma pasta chamada **components**, quee devemos criar;
+* Geralmente são nomeados com a **camel case**:FirstComponent.js;
+* No arquivo **criamos uma função**, que contém o código deste componente( a lógica e o template);
+* E também precisamos **exportar esta função**, para reutilizá-lo;
+
+```
+const FirstComponent = () => {
+
+    return (
+        <div>
+            <h1>Meu Primeiro Componente</h1>
+        </div>
+    );
+};
+
+export default FirstComponent;const FirstComponent = () => {
+
+    return (
+        <div>
+            <h1>Meu Primeiro Componente</h1>
+        </div>
+    );
+};
+
+export default FirstComponent;
+```
+
+## Importando componente
+
+* A impoprtação é a maneira que temos de **reutilizar o componente**;
+* Utilizamos a sintaxe: **import x from './components/X'** onde X é o nomee do componente;
+* Para colocar o componente importado em outro componente,precisamos colocá-lo em forma de tag: **<FirstComponent/>**
+* E então finalizamos o ciclo de importação;
+* Vamos iimportar o FirstComponent em App;
+
+
+## JSX
+
+* **JSX** é o HTML DO React;
+* Onde vamos declarar as tags de HTML que serão exibidas no navegador;
+* Ficam no return do componente;
+* Temos algumas diferenças do HTML, por exemplo: class será **className**;
+* Isso se dá pelas **instruções semelhantes dee JS e HTML, pois o JSX é JavaScript, então algumas terão nomes diferentes;
+* O JSC pode ter apenas **um elemento pai**;
+
+
+## Comentários no componente
+
+* Podemos inserir comentários de **duas maneiras** no componente;
+* Na parte da função, onde ´eexecutada a lógica, a sintaxe é: // Algum comentário;
+* e também no JSC: **{/* Algum comentário */}**
+* As chavves nos permite **executar sentenças em JavaScript**, veremos isso mais adiante;
+
+
+## Template Expressions
+
+* **Template Expressions** é o recurso que nos permite executar JS no JSX e também **interpolar variáves;**
+* Isso será muito útil ao longo dos seus projetos em React;
+* A sintaxe é: **{algumCódigoEmJS}**
+* **Tudo que está entre chaves é processado em JavaScript** e nos retorna um resultado;
+
+```
+const TemplateExpressions = () => {
+    const name = "Rodolfo"
+    return (
+        <div>
+            <h1>Olá {name},tudo bem?</h1>
+        </div>
+    )
+}
+
+export default TemplateExpressions
+
+```
+
