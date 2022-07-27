@@ -122,6 +122,90 @@ export default TemplateExpressions
 ## Hierarquia de componentes
 
 * Os componentes que criamos **podem ser reutilizados em vários componentes**
-* E ainda componentes **podem formar uma hierarquia, sendo importados uns dentro dos outros, como fizemos em App;
-* Vamos ver na prática estes conceitos!
+* E ainda componentes **podem formar uma hierarquia**, sendo importados uns dentro dos outros, como fizemos em App;
 
+
+## Evento de click
+
+* Os eventos para o front-end são **essenciais**;
+* Em várias situações vamos precisar do click,como ao **enviar formulários**;
+* No React os eventos já estão 'prontos',podemos utilizar **onClick** para ativar uma função ao clicar em um elemento;
+* Esta função é criada na própria função do componente;
+* As funções geralmente tem o padrão **handleAlgumaCoisa;
+
+```
+const Events =()=>{
+
+    const handleMyEvent =()=>{
+        console.log("Ativou o envento!")
+    }
+    return(
+        <div>
+            <div>
+                <button onClick={handleMyEvent}>Clique aqui!</button>
+            </div>
+        </div>
+    )
+}
+
+export default Events;
+
+```
+
+## Funções no evento
+
+
+* Quando as funções são simples, podemos **realizar a lógica no próprio evento**;
+* Isso **torna nosso código mais 'complicado'**, por atrelar lógica com HTML;
+* Mas em **algumas situações é aplicável**;
+
+```
+const Events =()=>{
+
+    const handleMyEvent =()=>{
+        console.log("Ativou o envento!")
+    }
+    return(
+        <div>
+            <div>
+                <button onClick={handleMyEvent}>Clique aqui!</button>
+            </div>
+            <div>
+                <button onClick={()=>console.log("Clicou!")}>Clique também!</button>
+                <button onClick={()=>{
+                    if(true){
+                        console.log("isso não deveria existir =/")
+                    }
+                }}>Clique aqui por favor!</button>
+            </div>
+            
+        </div>
+    );
+}
+
+export default Events;
+
+```
+
+## Funções de renderização
+
+* Podemos criar **funções que retornam JSX**;
+* Isso serve para criar situações que **dependam de outras condições;**
+* Ou seja, o JSX a ser renderizado pode variar por alguma variável, por exemplo;
+
+```
+
+ const renderSmothing = (x) => {
+
+        if(x){
+            return <h1>Renderizando isso</h1>;
+        }else{
+            return <h1>Também posso renderizar isso!</h1>
+        }
+
+    }
+
+{renderSmothing(true)}
+{renderSmothing(false)}
+
+    ```
