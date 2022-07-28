@@ -253,3 +253,88 @@ import City from './assets/city.jpg'
 * Podemos criar os nossos hooks, isso é chamado de **custom hook;**
 * Os hooks precisam ser **importados**;
 * Geralmente são úteis em todas as aplicações, **utilizaremos diversos ao longo do curso**;
+
+## useState hook
+
+* O hook de **useState** é um dos mais utilizados;
+* Utilizamos para **gerenciar o estado de algum dado,** variáveis não funcionam corretamente, o componente não re-renderiza;
+* Para guardar o dado definimos o nome da variável e para alterar vamos utilziar **setNome**, onde nome é o nome do nosso dado;
+
+```
+import React from 'react'
+import { useState } from 'react';
+
+const ManageData = () => {
+    let someData = 10;
+
+    const [Number, setNumber] = useState(15);
+
+    return (
+        <div>
+                      
+          <div>
+            <p>Valor: {Number}</p>
+            <button onClick={() => setNumber(20)}>Mudar state</button>
+          </div>
+        </div>
+      );
+}
+
+```
+
+## Renderização de lista
+
+* Uma outra ação bem comum é **renderizar listas** de dados no template;
+* Fazemos isso com os dados com tipo de array;
+* Utilizando o **método map** para nos auxiliar;
+* Além dos dados podemos **inserir JSX** em cada iteração;
+
+
+## A propriedade key
+
+* Iterar listas sem a **propriedade key** nos gera um warning, podemos verificar isso no console;
+* **O React precisa de uma chave única** em cada um dos itens iterados;
+* Isso serve para **ajudá-lo na renderização do componente**;
+* Geralmente teremos um **array de objetos** e podemos colocar key como alguma chave única, como  **id** de algum dado;
+* Em **último caso** devemos utilizar o index do método map;
+
+```
+const ListRender = () => {
+    const [list] = useState(["Matheus", "Pedro", "João"]);
+    const [users] = useState([
+        { id: 78932, name: "Matheus", age: 13 },
+        { id: 64654, name: "João", age: 50 },
+        { id: 76124, name: "Pedro", age: 21 }
+
+    ])
+    return (
+        <div>
+            <ul>
+                {list.map((item, i) => (
+                    <li key={i}>{item}</li>
+                ))}
+            </ul>
+            <ul>
+                {users.map((user) => (
+                    <li key={user.id}>{user.name} - {user.age}</li>
+                ))}
+            </ul>
+
+
+        </div>
+    )
+}
+```
+
+## Previous state
+
+* **Previous state** é um recurso que nos permite pegar o dado em seu vamor original dentro de um set de dado;
+* **Isso é muito utilizado para modificar listas**, pois temos o valor antigo e transformamos em um valor novo;
+* O **primeiro argumento** de um set sempre será o previous state;
+
+
+## Renderização condicional
+
+* **Renderização condicional** é quando imprimimos uma parte do template baseado em uma condição;
+* Ou seja, utilizando uma **checagem com if**;
+* Isso é interessante em sutuações como: usuário autenticado/não autenticado;
