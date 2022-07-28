@@ -208,4 +208,48 @@ export default Events;
 {renderSmothing(true)}
 {renderSmothing(false)}
 
-    ```
+```
+
+## Imagens no React
+
+* As **imagens Públicas** do nosso projeto podem ficar na pasta public;
+* De lá elas podem ser chamadas pelas tag img diretamente pelo 
+**/nome.jpg;**
+* Pois **a pasta public dica linkada com o src** das imagens;
+
+```
+{/*Quando a imagem está em public, basta uma barra para encontrar */}
+
+      <div>
+        <img src="/img1.jpg" alt="" />
+
+      </div>
+
+```
+
+* A pasta public pode ser utilizada para colocar imagens, como fizemos na aula passada;
+* Mas um padrão bem utilizada para as imagens dos projetos **é colocar em uma pasta chamada assets**, em src;
+* Ou seja, você vai encontrar projetos com as **dias abordagens**;
+* Em assets **precisamos importar as imagens**, e **o Src é dinâmico** com o nome de importação;
+
+```
+import City from './assets/city.jpg'
+
+{/*Imagem em assets*/}
+
+      <div>
+        <img src={City} alt="Cidade" />
+
+      </div>
+
+```
+
+
+## O que são hooks?
+
+* Recursos do React que tem **diversas funções**;
+* Como: **guardar e alterar o estado de algum dado** na nossa aplicação;
+* Todos os hooks começam com **use**, por exemplo: **useState**;
+* Podemos criar os nossos hooks, isso é chamado de **custom hook;**
+* Os hooks precisam ser **importados**;
+* Geralmente são úteis em todas as aplicações, **utilizaremos diversos ao longo do curso**;
