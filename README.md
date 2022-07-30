@@ -338,3 +338,18 @@ const ListRender = () => {
 * **Renderização condicional** é quando imprimimos uma parte do template baseado em uma condição;
 * Ou seja, utilizando uma **checagem com if**;
 * Isso é interessante em sutuações como: usuário autenticado/não autenticado;
+
+### Adicionando um else
+
+* Podemos também reealizar um **if/else no JSX**;
+* Aqui deveemos utilizar o **if ternário**;
+* Onde temos a sintaxe: condição ? bloco 1: bloco 2;
+
+
+
+## Props
+
+* **Props** é outro recurso fundamental do React;
+* Nos permite **passar valores de um componente pai para um componente filho;**
+* Isso será muito útil quando os dados forem carregados via banco de dados, por exemplo;
+* As props vem em um objeto no **argumento da função do componente**;

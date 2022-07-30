@@ -4,8 +4,11 @@ import City from './assets/city.jpg'
 import ConditionalRender from './Components/ConditionalRender';
 import ListRender from './Components/ListRender';
 import ManageData from './Components/ManageData';
+import ShowUserName from './Components/ShowUserName';
 
 function App() {
+  const name = "Joaquim"
+  
   return (
     <div className="App">
       <h1>Avançando em React</h1>
@@ -29,6 +32,9 @@ function App() {
       <ListRender/>
       <hr />
       <ConditionalRender/>
+      <hr />
+      <ShowUserName name="Rodolfo"/>
+      <ShowUserName name ={name}/>
     </div>
   );
 }
