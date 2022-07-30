@@ -353,3 +353,22 @@ const ListRender = () => {
 * Nos permite **passar valores de um componente pai para um componente filho;**
 * Isso será muito útil quando os dados forem carregados via banco de dados, por exemplo;
 * As props vem em um objeto no **argumento da função do componente**;
+
+### Desestruturando props
+
+* É super comum passar **mais de uma prop em um componente**;
+* Para facilitar isso o React nos permite **desestruturar as propriedades que chegam,** com o recurso de destructuring;
+* Se temos duas props: nage e age;
+* Podemos fazer assim function MyComponent({name,age});
+* Agora **não precisamos mais utilizar** props.algumaCoisa;
+
+### Reutilização de componentes
+* Com **props** a **reutilização de components** começa a fazer muito sentido;
+* Se temos os dados de 1000 carros por exemplo, podemos **reaproveitar o nosso CarDetails 1000 vezes**
+
+### Reutilização com loop
+
+* Os arrays de dados podem ter **muitos itens** também;
+* Então o correto é utilizar uma **estrutura de loop(map)** para sua exibição;
+* E com isso conseguimos conciliar os **três conceitos**: renderização de listas,reaproveitamento de componentes e props;
+
