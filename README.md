@@ -377,12 +377,25 @@ const ListRender = () => {
         <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar}/>
       ))}
 ```
-React Fragments
+## React Fragments
 
 * Os **React fragments** são interessantes para quando precisamos ter mais de um elemento pai em um componente;
 * Criamos uma tag vazia: <>...<>
 * **E ela serve como elemento pai**, não alterando a estrutura do HTML com uma div, por exemplo;
 
 
+
+## Children prop
+
+* **Children Prop** é um recurso utilizado para quando um componente precisa ter JSX dentro dele;
+* Porém **este JSX vem do componente pai**;
+* Então o componente age como um **container**, abraçando estes elementos;
+* E children é considerada uma **prop do componente**;
+
+
+## Funções em props
+* As **funções podem ser passadas para as props** normalmente;
+* Basta criar a função no componente pai e **enviar como prop** para o componente;
+* No componente filho ela pode ser ativada por um evento, por exemplo;
 
 
