@@ -3,13 +3,16 @@ import { useState } from 'react';
 import './App.css';
 import City from './assets/city.jpg'
 import CarDetails from './Components/CarDetails';
+import ChangeMessageState from './Components/ChangeMessageState';
 import ConditionalRender from './Components/ConditionalRender';
 import Container from './Components/Container';
 import ExecuteFunction from './Components/ExecuteFunction';
 import Fragments from './Components/Fragments';
 import ListRender from './Components/ListRender';
 import ManageData from './Components/ManageData';
+import Message from './Components/Message';
 import ShowUserName from './Components/ShowUserName';
+import UserDetails from './Components/UserDetails';
 
 
 function App() {
@@ -24,8 +27,19 @@ function App() {
   ];
   
   function showMessage(){
-    console.log("Elemento pai")
+    alert("Elemento pai")
   };
+  const [message, setMessage] = useState("")
+  const handleMessage = (msg) =>{
+    setMessage(msg);
+  }
+
+  const users =[
+    { id: 1, name: "Matheus", age: 13,job:"Student" },
+    { id: 2, name: "João", age: 50,job:"Dev Java" },
+    { id: 3, name: "Pedro", age: 21,job:"Dev Java"}
+
+]
   
   return (
     <div className="App">
@@ -80,7 +94,21 @@ function App() {
       </Container>
       {/* PropFunction */}
      <ExecuteFunction myFunction={showMessage}/>
-        {/* event as prop */}
+        {/* states lift */}
+        <Message msg={message}/>
+
+        <ChangeMessageState handleMessage = {handleMessage}/>
+
+        <hr />
+        <h2>Desafio</h2>
+
+        {users.map((user) =>(
+          <UserDetails key = {user.id} name = {user.name} age ={user.age} job ={user.job}/>
+
+        ))
+}
+        
+        
          </div>
   );
 }

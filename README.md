@@ -398,4 +398,15 @@ const ListRender = () => {
 * Basta criar a função no componente pai e **enviar como prop** para o componente;
 * No componente filho ela pode ser ativada por um evento, por exemplo;
 
+## Elevação de state
+
+
+
+* Elevação de state ou **State lift** é quando um valor é elevado do componente filho para o componente pai;
+* Geralmente temos **um componente que usa o state e outro que o altera**;
+* Então precisamos passar a alteração para o componente pai, e este passa para o componente que usa o state;
+
+
+
+
 
