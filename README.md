@@ -372,3 +372,17 @@ const ListRender = () => {
 * Então o correto é utilizar uma **estrutura de loop(map)** para sua exibição;
 * E com isso conseguimos conciliar os **três conceitos**: renderização de listas,reaproveitamento de componentes e props;
 
+```
+{cars.map((car)=>(
+        <CarDetails brand={car.brand} color={car.color} km={car.km} newCar={car.newCar}/>
+      ))}
+```
+React Fragments
+
+* Os **React fragments** são interessantes para quando precisamos ter mais de um elemento pai em um componente;
+* Criamos uma tag vazia: <>...<>
+* **E ela serve como elemento pai**, não alterando a estrutura do HTML com uma div, por exemplo;
+
+
+
+
