@@ -408,5 +408,14 @@ const ListRender = () => {
 
 
 
+## CSS global
 
+* O **CSS global** é utilizado para estilizar diversos elementos em comun ou fazer um reset noCSS;
+* Ulilizamos o arquivo **index.css** para isso;
+* Ele está na pasta src;
 
+## CSS  de componente
+* O **CSS de componente** é utilizado para um componente em específico;
+* Geralmentne **é criado um arquivo com o mesmo nome do componente** e este ´-e **importado non componente**;
+* Note que este método **não é scoped**, ou seja, o CSS vaza para outros componentes se houver uma regra em colisão;
+* O React já cria um exemplo desta técnica com o App.css/js;
