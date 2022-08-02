@@ -1,0 +1,14 @@
+.my_title {
+    font-weight: bolder;
+    color:gold;
+}
+
+.my_list{
+    list-style-type: none;
+    padding: 10px;
+}
+.my_item{
+    color:blue;
+    padding: 10px;
+}
+
