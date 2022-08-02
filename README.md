@@ -419,3 +419,43 @@ const ListRender = () => {
 * Geralmentne **é criado um arquivo com o mesmo nome do componente** e este ´-e **importado non componente**;
 * Note que este método **não é scoped**, ou seja, o CSS vaza para outros componentes se houver uma regra em colisão;
 * O React já cria um exemplo desta técnica com o App.css/js;
+
+## Inline style
+
+* O inlinne syle do react é **igual o do CSS**;
+* Por meio do **atributo style** consneguimos aplicar regras diretametne em umm elemento;
+* **Devemos optar por outras maneiras de CSS**, o inline pode dificultar a manutenção ou deixar o código imprevisível em algumas situações;
+
+```
+ <p style={{color:"blue",padding:"25px",borderTop:"2px solid red"}}>Este elemento foi estilizado de formo inline</p>
+```
+
+
+## Inline style Dinâmico
+
+* O **CSS dinâmico inline** aplica estilo baseado em uma condicional;
+* Vamos inserir no atributo um **if ternário**;
+Dejpendendo da condição podemos mudar que regras de estili um elemento recebe;
+```
+const n = 15
+<h2 style={n < 10 ? ({color:"purple"}):({color:"pink"}) }>CSS dinâmico</h2>
+```
+
+
+## Classese dinâmicas no CSS 
+* Podemos também aplicar lógica para **mudar a classe de CSS de um elemento**;
+* Também utilizaremos o **if ternário**;
+* Essa abordagem é **mais interessante que o CSS inline**;
+* Pois as classes estarão isoladas no arquivo de CSS, resolvendo o problema de organização de código;
+
+```
+const redTitle = true;
+<h2 className={redTitle ? "red-title" : "title"}>Este título vai ter classe dinâmica</h2>
+```
+
+## CSS Modules
+
+* O **CSS Modules é um recurso de CSS scoped;
+* Ou seja, ele vai ser **exlusivo do componente**;
+* O nome do arquivo é : Componente.module.css;
+* Precisamos importá-lo também no componente;

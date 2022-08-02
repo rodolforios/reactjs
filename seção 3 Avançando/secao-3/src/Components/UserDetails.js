@@ -6,7 +6,7 @@ const UserDetails = ({name,age,job}) => {
         <h2>{(name)}</h2>
         <p>Idade:{age}</p>
         <p>Profissão:{job}</p>
-        {age >=18 ? <p>Pode tirar a Habilitação</p>:<p>Não pode tirar a Habilitação</p>}
+        {age >=18? <p>Pode tirar a Habilitação</p>:<p>Não pode tirar a Habilitação</p>}
 
     </div>
   )
