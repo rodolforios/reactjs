@@ -845,3 +845,63 @@ npm install json-server
 * O nome do pacote é **typescript**;
 * E vamos adicionar de forma global com a **flag -g**
 * A partir da instalação temos como **executar/compilar** TS em qualquer local da nossa máquina, com o comando tsc;
+
+## React com TS
+
+* Adicionar **TypeSAcript ao React** nos dá mais possibilidades;
+* Seguindo a mesma linha de que em JS, **temos uma forma mais padronizada** para programar;
+* Como **tipos para componentes** ou mapeamento de **props por meio de interface**
+* Isso dá mais **confiabilidade** ao projeto e está sendo cada vez mais utilizado hoje em dia;
+
+## Instalando React com TS
+
+* Para instalar o TS junto do React é simples;
+
+* Vamos começar com create-react-app e adicionar a  lag-template com o valor de typescript;
+
+• **Um novo projeto é criado**, agora com arquivos .**tsx;**
+
+* Podemos inicializá-lo normalmente;
+
+```
+npx create-react-app 11_react_com_ts --template typescript
+```
+
+## Estrutura de React
+• A estrutura de React quando adicionamos TS **não muda muito**;
+
+* Temos as pastas clássicas como: **node_modules**, **src** e **public**;
+
+• Em src que as coisas ficam diferentes, temos a criação de **arquivos.tsx**;
+
+* **Que são arquivos jsx** porém com a possibilidade de aplicação das funcionalidades de TS;
+
+Podemos executar o projeto com **npm run start**;
+
+## Criação de varáveis em componentes
+
+* Podemos **criar varáveis** dentro dos componentes;
+* e elas podem receber os tipos que já vimos até este momento do curso;
+* Isso nos permite **trabalhar com JSX** com apoio destas variáveis e seus tipos;
+
+## Criação de funções em componentes
+
+* Podemos também criar **funções em componentes**;
+* Estas funções recebem **parâmetros**, que **podem ser tipados**;
+* E o saeu retorno também;
+* Ou seja, podemos aplicar os mesmos conceitos que já vimos de TS;
+
+
+## Extensão para react com TS
+
+* A extensão que vamos utilizar é a **TypeScript React code snippets**;
+* Ela nos ajuda com **atalhos** para programar mais rápido;
+* Como o **tsrafce**, que cria um componente funcional;
+* Isso torna o nosso dia a dia mais simples;
+
+
+## Importando componentes
+
+* A importação de componente **funciona da mesma forma que sem TypeScript**
+* Porém temos que nos atentar aos **valores e tipos das props** de cada componente;
+* O TS interage de forma mais sucinta na parte da importação;
