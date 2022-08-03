@@ -708,3 +708,19 @@ setPrice('');
 * **Vamos criar um novo useEffect** que mapeia uma outra mudança de estado;
 * Após ela ocorrer executamos a adição de produto;
 * **Obs:** nem sempre reutilizar um hook é a melhor estratégia.
+
+
+## Estado de loading
+* Quando fizermos requisições para APIs **é normal que haja um interrvalo de loading entre a requisição e o recebimento** da resposta;
+* POdemos fazer isso no nosso **hook** também;
+* **Identificar quando começa e termina**este estado;
+
+## Estado de loading no POST
+* Podemos bloquear ações indevidas em outras requests também, **como no POST**;
+* Uma ação interessante é **remover a ação de adicionar outro item** enquanto o request ainda não finalizou;
+
+## Tratando erros
+
+* Podemos tratar os erros das requisições por meio de um **try cactch**;
+* Além de pegar os dados do erro, também podemos **alterar um state para imprimir um elemento se algo der errado**
+* Desta maneira conseguimos **prever vários cenários**(dados resgatados,carregamento e erro);
