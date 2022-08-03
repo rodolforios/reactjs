@@ -465,4 +465,35 @@ const redTitle = true;
 * No React vamos também utilizar a **tag form** para formulários;
 * As labels dos inputs contém o atributo **htmlFor**, que deve ter o valor do name do input;
 * **Não utilizamos action**, pois o processamento será feito de form assíncrona;
+```
+<form>
+            <div>
+                <label htmlFor="name">Nome:</label>
+                <input type="text" name="name" placeholder="Digite seu nome" />
+            </div>
+            <input type="submit" value="Enviar" />
+ </form>
+ ```
+
+## Label envolvendo o input
+
+* Em React um padrão comum é a **tag label envolvendo o unput**;
+* Isso faz com que o atraibuto for se torne **opcional**;
+* **Simplificando nossa estrutura de HTML**, sem perder a semântica;
+
+```
+<label>
+            <span>E-mail</span>
+            <input type="email" name="email" placeholder="Digite seu e-mail" />
+</label>
+```
+
+## Manipulação de valores
+
+* Para manipular os valores dos inputs vamos utilizar o **hook useState**;
+
+* Ou seja, podemos armazenar na varável **e utilizar o set para alterar o valor;**
+* Vamos criar uma função para alterar o valor no evento **onChange**;
+* Deixando nosso código fávil de trabalhar nas próximas etapas: como envio dos dados para BD e validação;
+
 
