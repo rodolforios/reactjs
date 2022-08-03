@@ -1,0 +1,54 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "cadeira",
+      "price": "150",
+      "id": 4
+    },
+    {
+      "name": "mouse",
+      "price": "45",
+      "id": 5
+    },
+    {
+      "name": "mouse",
+      "price": "45",
+      "id": 6
+    },
+    {
+      "name": "mouse",
+      "price": "45",
+      "id": 7
+    },
+    {
+      "name": "argola",
+      "price": "7",
+      "id": 8
+    },
+    {
+      "name": "argola",
+      "price": "7",
+      "id": 9
+    },
+    {
+      "name": "TESTE",
+      "price": "78",
+      "id": 10
+    }
+  ]
+}
