@@ -681,3 +681,30 @@ const handleSubmit = async(e)=>{
 * Se a requisição foi feita com sucesso, podemos **adicionar o item a lista após o request**
 * Isso torna nossa aplicação mais **performática**;
 * Utilizaremos o **set do useState** para isso;
+
+```
+
+const addedProduct = await res.json()
+
+setProducts((prevProducts)=>[...prevProducts,addedProduct])
+
+setName('');
+setPrice('');
+  }
+
+```
+
+## Custom hook para o fetch
+
+* É normal dividir funções que poddem ser reaproveitadas em hooks;
+* Esta técnica é chamada de **custom hook**, e vamos criar um para o resgate de dados;
+* Os hooks geralmente ficam na **pasta hooks**;
+* Devemos utilizar o padrão **useName**;
+* Basicamente criamos uma função e exportamos ela;
+
+## Refatorando o POST
+
+* Poddemos **utilizar o mesmo hook** para incluir uma etapa de POST;
+* **Vamos criar um novo useEffect** que mapeia uma outra mudança de estado;
+* Após ela ocorrer executamos a adição de produto;
+* **Obs:** nem sempre reutilizar um hook é a melhor estratégia.
