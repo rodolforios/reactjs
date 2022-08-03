@@ -496,4 +496,46 @@ const redTitle = true;
 * Vamos criar uma função para alterar o valor no evento **onChange**;
 * Deixando nosso código fávil de trabalhar nas próximas etapas: como envio dos dados para BD e validação;
 
+```
+// Geraciamento de dados
+  const [name,setName] = useState()
 
+   const handleName = (e)=>{
+    setName(e.target.value)
+  }
+
+
+<div>
+        <label htmlFor="name">Nome:</label>
+        <input type="text" name="name" placeholder="Digite seu nome" onChange={handleName} />
+</div>
+```
+
+## Simplificando a manipulação
+
+* Quando temos vários inputs podemos **realizar a manipulação de forma mais simnples**;
+* Basicamente criamos uma **função inline no onChange**;
+* Ela vai **alterar o valor do state** com o método set, da mesma forma que a função isolada;
+
+```
+ <input type="email" name="email" placeholder="Digite seu e-mail" onChange={(e)=> setEmail(e.target.value)}/>
+```
+
+## Envio de formulário
+
+* Para enviar um form vamos utilizar o evento **onSubmit**ç
+* **Ele chamará uma função**, e nesta devemos lembrar de parar a submissão com o **preventDefault**;
+* Nesta etapa podemos realizar validações, envio de form para os ervidor,reset de form e outras ações;
+
+```
+<form onSubmit={handleSubmit}>
+
+
+const handleSubmit = (e)=>{
+    e.preventDefault();
+    console.log("enviando formulário")
+    console.log(name,email);
+  }
+
+
+```
