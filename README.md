@@ -808,3 +808,30 @@ npm install json-server
 * Neste caso vamos precisar criar um componente que corresponda com o padrão indicado e também a URL em App.js;
 * Na nested route **teremos o acesso ao parâmetro da URL** também;
 
+
+## No match route(404)
+
+* Podemos criar uma **página 404** facilmente com o React Router;
+* Basta **criarmos o componente** da página;
+* E no arquivo App.js definir um **path como***
+
+## Link ativo
+
+* Para ter fácil acesso a uma modificação para os links ativos vamos trocar o Link pelo **NavLink**;
+* Neste elemento temos acesso a um valor chamado **isActive**;
+* Ou seja, podemos **ativar uma classe** se a rota atual for a que está no **atributo to**;
+
+
+## Search Params
+
+* **Search Params** é um recurso que permitee obter o que vem na URL em forma de parâmetro, ex: produtos/ **q=camisa**
+* Utilizamos o hook **useSearchParams** para obtê-lis;
+* Com este recurso fica simples fazer uma **funcionalidade de busca** no sistema;
+
+
+## Redirect
+
+* Podemos precisar de um **redirecionamento de páginas** eventualmente;
+* **Exemplo:** uma página antiga do sistema responde agora a uma nova URL;
+* Para isso vamos **criar a rota com Route** normalmente;
+* Mas em element vamos utilizar o **componente Navigate** com **to** que vai para a rota correta;
