@@ -835,3 +835,13 @@ npm install json-server
 * **Exemplo:** uma página antiga do sistema responde agora a uma nova URL;
 * Para isso vamos **criar a rota com Route** normalmente;
 * Mas em element vamos utilizar o **componente Navigate** com **to** que vai para a rota correta;
+
+
+-----------------------------------
+
+## Instalando typescript
+
+* Para instalar o TypeScript vamos utilizar o **npm**;
+* O nome do pacote é **typescript**;
+* E vamos adicionar de forma global com a **flag -g**
+* A partir da instalação temos como **executar/compilar** TS em qualquer local da nossa máquina, com o comando tsc;
