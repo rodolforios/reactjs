@@ -539,3 +539,65 @@ const handleSubmit = (e)=>{
 
 
 ```
+
+## Controlled inputs
+
+* **Controlled inputs** é um recurso que nos permite mais flexibilidade nos forms de React;
+* Precisamos apenas **igualar o valor ao state**;
+* Um uso muito comum: formuláriosde edição, que os dados vem do back-end, conseguiremos preencer o input mais facilmente;
+
+```
+//props no app.js
+<MyForm user={{name:"Pedro", email: "pedro@pedrosa.com"}} />
+
+//props no MyForm.js
+const MyForm = ({user})
+
+//Adição de value no final de cada input
+
+<input type="text" name="name" placeholder="Digite seu nome" onChange={handleName} value={name}/>
+
+```
+
+## Limpando formulários
+
+* Com o controller inputs limpar o form será **fácil**;
+* Basta **atribuir um valor de uma string vazia aos states** e pronto!
+* Isso será feito após o envio, em formulários que o usuário precisa preencher novamente;
+
+```
+  setName('');
+  setEmail('');
+```
+
+## Input de Textarea
+
+* O textarea **pode ser considerado um input de text**normal;
+* Utilizaremos o **value** para alterar o state inicial;
+* E o evento **onChange** para modificar o valor do state;
+
+```
+<label htmlFor="bio" >
+          <span>Bio:</span>
+          <textarea name="bio"  placeholder='Descrição do usuário' onChange={(e) => setBio(e.target.value)}></textarea>
+</label>
+```
+
+## Input de Select
+
+* O select também será **muito semelhante** aos outros inputs;
+* Quando temos a alteração de um valor o **evento onChange** pode captar isso;
+* O value também pode atribuir qual **option** estará selecionada;
+
+```
+ <label>
+          <span>Função no sistema</span>
+          <select name="role" onChange={(e) =>setRole(e.target.value)}>
+            <option value="user">Usuário</option>
+            <option value="Editor">Editor</option>
+            <option value="Admin">Admin</option>
+          </select>
+</label>
+
+```
+
