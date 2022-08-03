@@ -609,6 +609,11 @@ const MyForm = ({user})
 * Podemos entender isso como uma etapa de preparação para APIs reais;
 * Ou seja, atingir o mesmo resultado mas sem precisar de uma estrutura no back-end
 
+```
+//inserir no package.json
+"server": "json-server --watch data/db.json"
+```
+
 ## A importância do useEffect
 
 * O **useEffect** faz com que determinada ação seja executada apenas uma vez;
@@ -724,3 +729,60 @@ setPrice('');
 * Podemos tratar os erros das requisições por meio de um **try cactch**;
 * Além de pegar os dados do erro, também podemos **alterar um state para imprimir um elemento se algo der errado**
 * Desta maneira conseguimos **prever vários cenários**(dados resgatados,carregamento e erro);
+
+
+## O que é React Router?
+
+* **React Router** é um dos pacotes mais utilizados para criar uma estrutura de rotas em aplicações de React;
+* Ou seja, permite que nossas **SPAs tenham múltiplas páginas*;
+* Precisamos **instalar** no nosso projeto;
+* *A **configuração e utilização é simples;
+* também temos outras funções como: **Redirect,Nested Routes, Not Found Routes** e outos;
+```
+npm install react-router-dom
+npm install json-server
+```
+
+
+## Configurando o React Router
+
+* Para configurar o React Router vamos ter que importar três elementos de **react-router-dom**;
+* **BrowserRouter**: Define onde a área do nosso app que vai trocar as páginas;
+* **Routes**: Define as rotas;
+* **Route** um elemento deste para cada rota, configurar com path e componennte da rota;
+
+```
+
+
+<BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/about" element={<About/>}/>
+
+          
+        </Routes>
+
+</BrowserRouter>
+
+```
+
+## Adicionando Links
+
+* Para criar links para as páginas vamos precisar utilizar o **Link** do React Router;
+* No link configuramos o parâmetro **to**, que recebe a **URL/path** que será redirecionado quem clicar no link;
+
+```
+<nav>
+        <Link to="/">Home</Link>
+        <Link to="/about">Sobre</Link>
+</nav>
+
+```
+
+## Carregando dados
+
+* Vamos exercitar novamente o carregamento de dados com nosso hook **useFetch**;
+
+* Depois poderemos utilizá-los para o **carregamento de dados individuais**;
+* Utilizaremos o hook igual ao da última seção e vamos imprimir os produtos na Home da mesma forma;
+
