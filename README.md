@@ -786,3 +786,25 @@ npm install json-server
 * Depois poderemos utilizá-los para o **carregamento de dados individuais**;
 * Utilizaremos o hook igual ao da última seção e vamos imprimir os produtos na Home da mesma forma;
 
+
+## Rota dinâmica
+
+* Para criar uma rota dinâmica vamos precisar definir uma **nova Route** em App.js;
+* Que deve ter o padrão de: **/products/:id**
+* Onde **:id** é o dado dinâmico, ou seja, podemos ter qualquer valor;
+* Na página podemos utilizar o hook **useParams** para resgatar esta informação;
+
+## Carregando dado individual
+
+* Graças ao passo dado na aula passada o **carregamento individual** de um produto será fácil;
+* Vamos utilizar o id recebido para **formar a nova URL**;
+* E por fim poddemos utilizar o hook **useFetch** para trazer o item;
+* Por fim faremos a **validação e impressão** do mesmo no JSX;
+
+## Nested route
+
+* As nested routes indicam ** URLs mais complexas**, como:
+**/products/:id/something;**
+* Neste caso vamos precisar criar um componente que corresponda com o padrão indicado e também a URL em App.js;
+* Na nested route **teremos o acesso ao parâmetro da URL** também;
+
