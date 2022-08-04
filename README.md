@@ -905,3 +905,28 @@ Podemos executar o projeto com **npm run start**;
 * A importação de componente **funciona da mesma forma que sem TypeScript**
 * Porém temos que nos atentar aos **valores e tipos das props** de cada componente;
 * O TS interage de forma mais sucinta na parte da importação;
+
+
+## Destructuring
+
+O **destructuring** é um recurso de ES6, que **permite separar um array ou objeto** em várias variáveis;
+* Aplicamos esta técnica nas **props**, para não precisa rerepetir o nome do objeto sempre;
+* Podemos fazer desta maneira em TS também;
+
+
+## O hook useState
+
+* O **useState** é um hook muito utilizado em React;
+* Serve para **consultar e alterar o estado** de algum dado;
+* ** Atrelamos uma função set a um evento**, como mudannnça de dado;
+* **Atrelamos uma função set a um evento**, como mudança de dado em innput e alteramos o valor da varável base;
+* Podemos adaptar este recurso para TS também;
+
+
+## Enum
+
+* O **Enum** é uma forma interessante de formatar um objeto com chaves e valores;
+* Onde podemos **utilizar como props**;
+* Passando a chave pela prop,imprimimos o valor dela no componente;
+
+
