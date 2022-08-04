@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext } from 'react';
 
 import './App.css';
 
@@ -13,6 +13,23 @@ import Destruturing,{Category} from './components/Destruturing';
 
 import State from './components/State';
 
+// 10 - Utilizando Context
+
+import Context from './components/Context'
+
+// 8 - type
+type textOuNull = string | null
+type fixed = "isso" | "Ou" | "Aquilo";
+
+// 9 - context
+interface IAppContext{
+  language: string,
+  framework: string;
+  projects: number;
+}
+
+export const AppContext = createContext<IAppContext | null>(null)
+
 function App() {
   // 1 variáveis
 
@@ -26,9 +43,24 @@ function App() {
 
     return `Olá, ${name}!`
   }
+  //8 - type
 
+  const myText:textOuNull = "Tem algum texto aqui"
+  let mySecondText:textOuNull=null;
+
+  //mySecondText = "opa";
+  const testandoFixed:fixed = "isso"
+
+  // 9 - Context
+
+  const contextValue: IAppContext = {
+    language: "JavaScript",
+    framework: "Express",
+    projects: 5,
+  }
 
   return (
+    <AppContext.Provider value={contextValue}>
     <div className="App">
       <h1>TypeScript com React</h1>
       <h2>Nome: {name}</h2>
@@ -46,9 +78,13 @@ function App() {
        <Destruturing title="Segundo post" content="Algum outro conteúdo" commentsQty={16} tags={["ts","js","React"]}category={Category.TS}/> 
        <State/>
     
+    {myText && <p>Tem texto na variável</p> }
+    {mySecondText && <p>Tem texto na variável</p> }
+    {testandoFixed && <p>dá para escrever qualquer coisa?</p> }
     
-    
+    <Context/>
     </div>
+    </AppContext.Provider>
   );
 }
 

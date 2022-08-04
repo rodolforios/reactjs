@@ -929,4 +929,24 @@ O **destructuring** é um recurso de ES6, que **permite separar um array ou obje
 * Onde podemos **utilizar como props**;
 * Passando a chave pela prop,imprimimos o valor dela no componente;
 
+## Types
+
+* Além das interfaces, podemos criar estruturas de tipos com o **type**;
+
+* Isso nos permite criar dados com **tipos de dados fixos**;
+* Ou até tipos customizados, como quando utilzamos o **operador |**
+
+## Context API
+
+* A **Conxtext API**, é uma forma de transmitir dados entre componentes no React;
+* A ideia principal é que podemos **determinar quais componentes recebem estes dados**
+* Ou seja, fazem parte do **contexto**;
+* Podemos aplicar TS a esta funcionalidade também;
+
+## Utilizando o dado de contexto
+
+* Para utilizar os dados do contexto vamos precisar de um **hook**
+* Que é o **useContext**;
+* A partir dele conseguimos **extrair os dados** e utilizar em um componente;
+
 
