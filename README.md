@@ -950,3 +950,7 @@ O **destructuring** é um recurso de ES6, que **permite separar um array ou obje
 * A partir dele conseguimos **extrair os dados** e utilizar em um componente;
 
 
+
+
+# Projeto Secret Word!
+
